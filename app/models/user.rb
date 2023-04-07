@@ -6,5 +6,7 @@ class User < ApplicationRecord
 
   has_many :groups
   has_many :expenses, dependent: :destroy
+  has_many :group_members
+  has_many :member_groups, through: :group_members, source: :group
 
 end
