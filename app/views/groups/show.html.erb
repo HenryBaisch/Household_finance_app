@@ -35,6 +35,27 @@
 </div>
 
 <!-- Other content of the show.html.erb file -->
+<!-- Other content -->
+<div class="row">
+    <div class="col-md-6">
+        <h2>Group Members</h2>
+        <table class="table mt-4">
+        <thead>
+            <tr>
+            <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% @group.members.each do |member| %>
+            <tr>
+                <td><%= member.email %></td>
+            </tr>
+            <% end %>
+        </tbody>
+        </table>
+    </div>
+</div>
+
 
 <!-- Add this section to render the expense partial for each expense in the group -->
 <h2 class="my-4">Expenses</h2>
